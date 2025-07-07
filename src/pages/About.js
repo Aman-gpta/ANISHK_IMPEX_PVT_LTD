@@ -1,12 +1,12 @@
 import React from 'react';
 import './About.css';
-import companyLogo from '../assets/company-logo.png.png';
+import aboutUsImage from '../assets/aboutusimage.png';
 import manishImage from '../assets/manish.png.jpg';
 import sangeetaImage from '../assets/sangeeta.png.jpg';
 import komalImage from '../assets/komal.png.jpg';
 
 const About = () => {
-    
+
     const directors = [
         {
             name: "Manish Vijay",
@@ -57,11 +57,11 @@ const About = () => {
                     <div className="about-hero-content">
                         <div className="about-image">
                             <div className="about-image-container">
-                                <img src={companyLogo} alt="ANISHK IMPEX Logo" className="about-img company-logo" />
+                                <img src={aboutUsImage} alt="About Us" className="about-img company-logo" />
                             </div>
                         </div>
                         <div className="about-text">
-                            <h1>About Our Company</h1>
+                            <h1>About Us</h1>
                             <p className="about-intro">
                                 At Anishk Impex Pvt. Ltd. we specialize in the import and distribution of high-quality aluminium scrap. As a newly established company, we bring fresh energy, integrity, and efficiency to the metal recycling and supply industry. Our goal is to support manufacturers, recyclers, and industries by providing reliable, sustainable, and cost-effective aluminium scrap sourced from trusted global partners.
                             </p>
@@ -85,20 +85,20 @@ const About = () => {
                             <div key={index} className="director-card">
                                 <div className="director-image">
                                     {director.name === "Manish Vijay" ? (
-                                        <img 
-                                            src={manishImage} 
+                                        <img
+                                            src={manishImage}
                                             alt={director.name}
                                             className="director-img"
                                         />
                                     ) : director.name === "Komal Vijay" ? (
-                                        <img 
-                                            src={komalImage} 
+                                        <img
+                                            src={komalImage}
                                             alt={director.name}
                                             className="director-img"
                                         />
                                     ) : director.name === "Sangeeta Gupta" ? (
-                                        <img 
-                                            src={sangeetaImage} 
+                                        <img
+                                            src={sangeetaImage}
                                             alt={director.name}
                                             className="director-img"
                                         />

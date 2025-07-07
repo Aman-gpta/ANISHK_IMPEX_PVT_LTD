@@ -19,6 +19,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: auto !important;
+}
+
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
@@ -28,6 +32,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Ensure main container doesn't interfere with scrolling */
+main {
+  position: relative;
+  overflow-x: hidden;
 }
 
 /* Typography */

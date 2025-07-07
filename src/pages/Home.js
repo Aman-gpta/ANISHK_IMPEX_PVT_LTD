@@ -1,19 +1,35 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { ArrowRight, Download, Phone, Mail, MapPin } from 'lucide-react';
-import ReviewSection from '../components/ReviewSection';
 import SmoothTyping from '../components/SmoothTyping';
 import heroBgImage from '../assets/HeroBgImg.png';
 import prod1Image from '../assets/prod1.jpg';
+import offwhiteImage from '../assets/offwhite.jpg';
+import copperImg from '../assets/prod1.jpg'; // Replace with actual copper image if available
+import aluminiumImg from '../assets/prod1.jpg'; // Replace with actual aluminium image if available
+import metalScrapBg from '../assets/metal-scrap-background.jpg';
 import './Home.css';
+import { useLocation } from 'react-router-dom';
 
 const Home = () => {
+    const location = useLocation();
+    useEffect(() => {
+        if (location.hash === '#products') {
+            const section = document.getElementById('products');
+            if (section) {
+                setTimeout(() => {
+                    section.scrollIntoView({ behavior: 'smooth' });
+                }, 100);
+            }
+        }
+    }, [location]);
+
     return (
         <div className="home">
             {/* Hero Section */}
             <section
                 className="hero section section-dark"
                 style={{
-                    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.7)), url(${heroBgImage})`,
+                    backgroundImage: `url(${heroBgImage})`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     backgroundAttachment: 'fixed',
@@ -31,81 +47,32 @@ const Home = () => {
             </section>
 
             {/* Products Section */}
-            <section id="products" className="products-section section section-gray">
+            <section id="products" className="products-section section section-gray" style={{
+                backgroundImage: `url(${offwhiteImage})`,
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'center',
+                backgroundAttachment: 'fixed',
+                color: '#222'
+            }}>
                 <div className="container">
-                    <h2 className="section-title">Our Products</h2>
-                    <div className="products-grid">
-                        <div className="product-card">
-                            <div className="product-image">
-                                <img src={prod1Image} alt="High-Grade Copper Scrap" className="product-img" />
-                            </div>
-                            <div className="product-content">
-                                <h3>High-Grade Copper Scrap</h3>
-                                <p>Premium quality copper scrap material sourced from industrial operations. Ideal for recycling and manufacturing applications with 99% purity.</p>
-                                <a href="#" className="product-link">View Details</a>
-                            </div>
+                    <h2 className="section-title" style={{color: '#111'}}>Our Products</h2>
+                    <div className="products-grid" style={{display: 'flex', gap: '3rem', justifyContent: 'center'}}>
+                        {/* Copper Products Card */}
+                        <div style={{background: 'linear-gradient(135deg, #444 60%, #666 100%)', color: '#fff', borderRadius: '20px', boxShadow: '0 6px 24px rgba(0,0,0,0.12)', width: 540, height: 540, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', border: '3px solid #111'}}>
+                            <img src={copperImg} alt="Copper Products" style={{width: 320, height: 320, objectFit: 'cover', borderRadius: 12, marginBottom: 32, border: '2px solid #111'}} />
+                            <h3 style={{color: '#fff', marginBottom: 32, fontSize: '2rem'}}>Copper Products</h3>
+                            <button className="product-btn-animated" style={{padding: '18px 40px', borderRadius: 10, background: '#b47559', color: '#fff', border: 'none', cursor: 'pointer', fontSize: '1.1rem', fontWeight: 600, boxShadow: '0 4px 16px rgba(0,0,0,0.12)'}}>View Copper Products</button>
                         </div>
-
-                        <div className="product-card">
-                            <div className="product-image">
-                                <img src={prod1Image} alt="Aluminum Alloy Scrap" className="product-img" />
-                            </div>
-                            <div className="product-content">
-                                <h3>Aluminum Alloy Scrap</h3>
-                                <p>Clean aluminum alloy scrap from various industrial sources. Perfect for foundries and manufacturing facilities with consistent quality.</p>
-                                <a href="#" className="product-link">View Details</a>
-                            </div>
-                        </div>
-
-                        <div className="product-card">
-                            <div className="product-image">
-                                <img src={prod1Image} alt="Stainless Steel Scrap" className="product-img" />
-                            </div>
-                            <div className="product-content">
-                                <h3>Stainless Steel Scrap</h3>
-                                <p>High-quality stainless steel scrap with documented composition. Ideal for specialty manufacturing and recycling operations.</p>
-                                <a href="#" className="product-link">View Details</a>
-                            </div>
-                        </div>
-
-                        <div className="product-card">
-                            <div className="product-image">
-                                <img src={prod1Image} alt="Brass Scrap Materials" className="product-img" />
-                            </div>
-                            <div className="product-content">
-                                <h3>Brass Scrap Materials</h3>
-                                <p>Assorted brass scrap from various industrial applications. Sorted by grade and quality for specific manufacturing needs.</p>
-                                <a href="#" className="product-link">View Details</a>
-                            </div>
-                        </div>
-
-                        <div className="product-card">
-                            <div className="product-image">
-                                <img src={prod1Image} alt="Lead Scrap Products" className="product-img" />
-                            </div>
-                            <div className="product-content">
-                                <h3>Lead Scrap Products</h3>
-                                <p>High-density lead scrap material with minimal contaminants. Suitable for battery manufacturing and other industrial applications.</p>
-                                <a href="#" className="product-link">View Details</a>
-                            </div>
-                        </div>
-
-                        <div className="product-card">
-                            <div className="product-image">
-                                <img src={prod1Image} alt="Zinc Alloy Materials" className="product-img" />
-                            </div>
-                            <div className="product-content">
-                                <h3>Zinc Alloy Materials</h3>
-                                <p>Premium zinc alloy scrap with certified composition. Perfect for die-casting and manufacturing operations requiring high-quality materials.</p>
-                                <a href="#" className="product-link">View Details</a>
-                            </div>
+                        {/* Aluminium Products Card */}
+                        <div style={{background: 'linear-gradient(135deg, #444 60%, #666 100%)', color: '#fff', borderRadius: '20px', boxShadow: '0 6px 24px rgba(0,0,0,0.12)', width: 540, height: 540, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', border: '3px solid #111'}}>
+                            <img src={aluminiumImg} alt="Aluminium Products" style={{width: 320, height: 320, objectFit: 'cover', borderRadius: 12, marginBottom: 32, border: '2px solid #111'}} />
+                            <h3 style={{color: '#fff', marginBottom: 32, fontSize: '2rem'}}>Aluminium Products</h3>
+                            <button className="product-btn-animated" style={{padding: '18px 40px', borderRadius: 10, background: '#b47559', color: '#fff', border: 'none', cursor: 'pointer', fontSize: '1.1rem', fontWeight: 600, boxShadow: '0 4px 16px rgba(0,0,0,0.12)'}}>View Aluminium Products</button>
                         </div>
                     </div>
                 </div>
             </section>
-
-            {/* Review Section */}
-            <ReviewSection />
         </div>
     );
 };
