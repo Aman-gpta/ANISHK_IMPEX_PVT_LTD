@@ -1,0 +1,231 @@
+/* About Page Styles */
+
+/* About Hero Section */
+.about-hero {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    position: relative;
+    overflow: hidden;
+    background-color: #111111;
+    background-image: radial-gradient(circle at 10% 20%, rgba(30, 30, 30, 1) 0%, rgba(15, 15, 15, 1) 90%);
+}
+
+/* Decorative curved lines for background */
+.about-hero::before,
+.about-hero::after {
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    z-index: 3;
+    /* Above overlay but below content */
+}
+
+/* Top-right curved line */
+.about-hero::before {
+    top: -10%;
+    right: -5%;
+    width: 60%;
+    height: 70%;
+    border-radius: 0 0 0 100%;
+    border-left: 2px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    transform: rotate(15deg);
+}
+
+.about-hero-content {
+    display: flex;
+    flex-direction: row;
+    /* Changed from column to row */
+    align-items: center;
+    justify-content: space-between;
+    /* Added to distribute space between items */
+    gap: 2rem;
+    /* Reduced from 4rem for better spacing */
+    max-width: 100%;
+    position: relative;
+    z-index: 10;
+    /* Increased z-index to appear above the overlay */
+}
+
+/* Additional decorative elements */
+.about-background-curves {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 4;
+    /* Above diagonal lines but below content */
+}
+
+.curve-1,
+.curve-2,
+.curve-3,
+.curve-4 {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.1;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.curve-1 {
+    top: 10%;
+    right: 5%;
+    width: 200px;
+    height: 200px;
+    border-width: 2px;
+}
+
+.curve-2 {
+    bottom: 15%;
+    left: 10%;
+    width: 300px;
+    height: 150px;
+    border-width: 1px;
+    transform: rotate(30deg);
+}
+
+.curve-3 {
+    top: 40%;
+    left: 30%;
+    width: 100px;
+    height: 100px;
+    border-width: 1px;
+    opacity: 0.05;
+}
+
+.curve-4 {
+    bottom: 30%;
+    right: 20%;
+    width: 250px;
+    height: 250px;
+    border-width: 2px;
+    opacity: 0.15;
+}
+
+/* Hero content layout */
+.about-image {
+    flex: 0 0 40%;
+    /* Set to take up 40% of the space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-text {
+    flex: 1;
+    /* Changed to take up more space than image */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* Changed from center to align text left */
+    justify-content: center;
+    margin-top: 0;
+    /* Removed margin-top since we're now in a row layout */
+}
+
+.about-image-container {
+    width: 100%;
+    max-width: 800px;
+    /* Adjusted from 1000px for better side-by-side layout */
+    overflow: hidden;
+    position: relative;
+    padding: 0;
+    background-color: transparent;
+}
+
+.about-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: none;
+}
+
+.company-logo {
+    max-height: 800px;
+    /* Reverted to original size */
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+.about-image-container::after {
+    content: none;
+}
+
+/* Diagonal line backgrounds */
+.diagonal-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.05;
+    background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.1) 0, rgba(255, 255, 255, 0.1) 1px, transparent 1px, transparent 50px);
+    pointer-events: none;
+    z-index: 2;
+    /* Above overlay but below other decorative elements */
+}
+
+/* Dark overlay for better text contrast */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+/* About text styling */
+.about-text h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: var(--white);
+    text-shadow: 0 0 20px var(--glow-white);
+    text-align: left;
+    /* Changed from center to left */
+}
+
+.about-intro {
+    font-size: 1.2rem;
+    color: var(--secondary);
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    text-align: left;
+    /* Changed from center to left */
+    max-width: 100%;
+    /* Changed from 90% to fit the container better */
+    margin-left: 0;
+    /* Changed from auto to align left */
+    margin-right: 0;
+    /* Changed from auto to align left */
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    text-align: left;
+    /* Changed from center to left */
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: var(--secondary);
+    max-width: 100%;
+    /* Changed from 90% to fit the container better */
+    margin-left: 0;
+    /* Changed from auto to align left */
+    margin-right: 0;
+    /* Changed from auto to align left */
+}
+
+.director-img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    border: 3px solid rgba(255, 255, 255, 0.2);
+}

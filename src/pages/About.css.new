@@ -1,0 +1,154 @@
+/* About Page Styles */
+
+/* About Hero Section */
+.about-hero {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    position: relative;
+    overflow: hidden;
+    background: #b8b2b2;
+    background: radial-gradient(circle, rgba(184, 178, 178, 1) 26%, rgba(245, 245, 245, 1) 81%);
+}
+
+/* Rest of the existing CSS content would go here */
+
+.about-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+}
+
+.about-hero-content {
+    display: flex;
+    flex-direction: column;
+    /* Changed to column layout */
+    align-items: center;
+    justify-content: center;
+    /* Center everything */
+    gap: 1rem;
+    /* Small gap between elements */
+    max-width: 100%;
+    position: relative;
+    z-index: 10;
+    /* Increased z-index to appear above the overlay */
+}
+
+.about-image-container {
+    width: 100%;
+    max-width: 400px;
+    /* Centered image container */
+    overflow: hidden;
+    position: relative;
+    padding: 0;
+    margin: 0 auto 1rem;
+    background-color: transparent;
+}
+
+.company-logo {
+    max-height: 250px;
+    /* Smaller logo above the text */
+    object-fit: contain;
+    margin: 0 auto;
+    display: block;
+}
+
+.about-text {
+    flex: 1;
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center the text */
+    justify-content: center;
+    text-align: center;
+    /* Center align text */
+    margin: 0 auto;
+}
+
+.about-text h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+    background: var(--gradient-text);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 20px var(--glow-white);
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+}
+
+.about-intro {
+    font-size: 1.2rem;
+    color: var(--secondary);
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    text-align: center;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: var(--secondary);
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-section {
+    padding-left: 0;
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+    .directors-grid {
+        width: 95%;
+        max-width: 320px;
+    }
+    
+    .director-placeholder, .director-img {
+        width: 130px;
+        height: 130px;
+    }
+    
+    .director-content {
+        padding: 0 1rem 1.5rem;
+    }
+    
+    .director-content h3 {
+        font-size: 1.3rem;
+    }
+    
+    .director-content p {
+        font-size: 0.95rem;
+    }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .about-hero-content {
+        flex-direction: column;
+        gap: 0;
+        padding: 0 20px;
+    }
+}
+
+.director-img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    border: 3px solid rgba(255, 255, 255, 0.2);
+}
