@@ -22,7 +22,9 @@
 
 .navbar-container {
     width: 100%;
-    padding: 0 20px 0 0;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -59,13 +61,13 @@
 }
 
 .navbar-logo-img {
-    height: 200px;
+    height: 90px;
     width: auto;
-    max-height: 240px;
-    max-width: 340px;
+    max-height: 90px;
+    max-width: 450px;
     object-fit: contain;
     object-position: center;
-    margin-top: 16px;
+    margin-top: 0;
     display: block;
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
     padding-left: 0;
@@ -96,7 +98,7 @@ body.home-page .navbar-logo-text {
     list-style: none;
     gap: 2.5rem;
     margin: 0;
-    padding: 0;
+    padding: 0 2rem 0 0;
     flex: 1;
     justify-content: flex-end;
 }

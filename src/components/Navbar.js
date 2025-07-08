@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
-import logo from '../Copy of Copy of Global Metal Traders Logo (11).png';
+import logo from '../assets/LOGO NAVBAR.png';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -126,7 +126,7 @@ const Navbar = () => {
                     <Link to="/" className="navbar-logo" onClick={handleNavClick}>
                         <img src={logo} alt="Anishk Impex" className="navbar-logo-img" />
                     </Link>
-                    <span className="navbar-logo-text">ANISHK IMPEX PVT. LTD.</span>
+                    <span className="navbar-logo-text">ANISHK IMPEX</span>
                 </div>
 
                 {/* Desktop Menu */}
@@ -166,7 +166,7 @@ const Navbar = () => {
                     <Link to="/" className="navbar-logo" onClick={handleNavClick}>
                         <img src={logo} alt="Anishk Impex" className="mobile-menu-logo-img" />
                     </Link>
-                    <span className="mobile-menu-logo-text">ANISHK IMPEX PVT. LTD.</span>
+                    <span className="mobile-menu-logo-text">ANISHK IMPEX</span>
                 </div>
                 {navItems.map((item, index) => (
                     item.isProducts ? (
