@@ -10,9 +10,6 @@ const Contact = () => {
         message: ''
     });
 
-    const [isSubmitting, setIsSubmitting] = useState(false);
-    const [submitStatus, setSubmitStatus] = useState('');
-
     const handleChange = (e) => {
         setFormData({
             ...formData,
@@ -20,40 +17,36 @@ const Contact = () => {
         });
     };
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
-        setIsSubmitting(true);
-
-        // Simulate form submission
-        setTimeout(() => {
-            setIsSubmitting(false);
-            setSubmitStatus('success');
-            setFormData({ name: '', email: '', company: '', message: '' });
-
-            // Clear success message after 3 seconds
-            setTimeout(() => {
-                setSubmitStatus('');
-            }, 3000);
-        }, 1500);
+        const { name, email, company, message } = formData;
+        const subject = encodeURIComponent(`Quote Request from ${name}`);
+        const body = encodeURIComponent(
+            `Name: ${name}\n` +
+            `Email: ${email}\n` +
+            `Company: ${company}\n\n` +
+            `Message:\n${message}`
+        );
+        window.location.href = `mailto:anishkimpex@gmail.com?subject=${subject}&body=${body}`;
     };
 
     const contactInfo = [
         {
             icon: <Mail size={24} />,
             title: "Email",
-            info: "info@steelworks.com",
-            link: "mailto:info@steelworks.com"
+            info: "anishkimpex@gmail.com",
+            link: "mailto:anishkimpex@gmail.com"
         },
         {
             icon: <Phone size={24} />,
             title: "Phone",
-            info: "+91 -9887973000",
+            info: "+91-9887973000",
             link: "tel:+91-9887973000"
         },
         {
             icon: <MapPin size={24} />,
             title: "Working Office",
-            info: "1st Floor,  SB-10, Narayan Sagar, Narayan Vihar, Gopalpura Bypass, Ajmer, Road, Jaipur, Rajasthan 302020",
+            info: "1st Floor,  SB-10, Narayan Sagar, Narayan Vihar, Gopalpura Bypass, Ajmer, Road, Jaipur, Rajasthan 302020",
             link: "https://maps.app.goo.gl/2bZWAUnjr52NWi9W6?g_st=iwb"
         }
     ];
@@ -123,27 +116,11 @@ const Contact = () => {
 
                                 <button
                                     type="submit"
-                                    className={`submit-btn ${isSubmitting ? 'submitting' : ''}`}
-                                    disabled={isSubmitting}
+                                    className="submit-btn"
                                 >
-                                    {isSubmitting ? (
-                                        <>
-                                            <div className="spinner"></div>
-                                            Sending...
-                                        </>
-                                    ) : (
-                                        <>
-                                            <Send size={20} />
-                                            Get Quote
-                                        </>
-                                    )}
+                                    <Send size={20} />
+                                    Get Quote
                                 </button>
-
-                                {submitStatus === 'success' && (
-                                    <div className="success-message">
-                                        ✓ Quote request sent successfully! We'll get back to you within 24 hours.
-                                    </div>
-                                )}
                             </form>
                         </div>
 
@@ -169,7 +146,7 @@ const Contact = () => {
                                     <div className="contact-text">
                                         <h4>Registered Office</h4>
                                         <p>201, Shree Ram Residency, P.No. 3-4, Sankhla Colony, Tonk Road, Jaipur (Raj.)
-Pincode- 302015</p>
+Pincode- 302015</p>
                                     </div>
                                 </div>
                             </div>

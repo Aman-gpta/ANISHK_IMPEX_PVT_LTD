@@ -562,66 +562,58 @@
 }
 
 .products-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    display: flex;
+    gap: 2in;
+    justify-content: center;
 }
 
 .product-card {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
-    height: 100%;
+    background: linear-gradient(135deg, #444 60%, #666 100%);
+    color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+    width: 480px;
+    height: 480px;
     display: flex;
     flex-direction: column;
-}
-
-.product-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--copper);
-    box-shadow: 0 0 30px rgba(199, 120, 76, 0.3);
-}
-
-.product-image {
-    height: 0;
-    padding-bottom: 100%;
-    /* Makes it square */
-    background: linear-gradient(45deg, #333, #222);
-    position: relative;
-    overflow: hidden;
-}
-
-.product-img {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    width: calc(100% - 30px);
-    height: calc(100% - 30px);
-    object-fit: cover;
-    object-position: center;
-    border: 3px solid #000000;
-    border-radius: 8px;
-    background: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
-
-.product-placeholder {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--copper);
-    font-size: 1.4rem;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    font-weight: bold;
+    border: 3px solid #111;
+}
+
+.product-card-img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 32px;
+    border: 2px solid #111;
+}
+
+.product-card-title {
+    color: #fff;
+    margin-bottom: 32px;
+    font-size: 2rem;
+}
+
+.product-btn-animated {
+    padding: 18px 40px;
+    border-radius: 10px;
+    background: linear-gradient(45deg, var(--primary), var(--black));
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    transition: all 0.3s ease;
+}
+
+.product-btn-animated:hover {
+    background: var(--white);
+    color: var(--black);
+    transform: translateY(-2px);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
 }
 
 .product-content {
