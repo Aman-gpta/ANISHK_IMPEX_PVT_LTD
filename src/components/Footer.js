@@ -9,12 +9,12 @@ const Footer = () => {
         {
             icon: <Mail size={20} />,
             name: "Email",
-            url: "mailto:hello@anishkimpex.com"
+            url: "mailto:anishkimpex@gmail.com"
         },
         {
             icon: <Phone size={20} />,
             name: "WhatsApp",
-            url: "https://wa.me/1234567890" // Replace with your actual WhatsApp number
+            url: "https://wa.me/919887973000" // Replace with your actual WhatsApp number
         }
     ];
 
@@ -89,18 +89,18 @@ const Footer = () => {
                         <div className="footer-contact">
                             <p>
                                 <Mail size={16} />
-                                <span>hello@anishkimpex.com</span>
+                                <span>anishkimpex@gmail.com</span>
                             </p>
                             <p>
                                 <Phone size={16} />
-                                <span>+91 1234567890</span>
+                                <span>+91-9887973000</span>
                             </p>
                             <p>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                     <circle cx="12" cy="12" r="10" />
                                     <polyline points="12 6 12 12 16 14" />
                                 </svg>
-                                <span>Business Hours: Mon-Fri, 9am-5pm</span>
+                                <span>Business Hours: Mon-Sat, 9am to 6pm</span>
                             </p>
                         </div>
                     </div>
