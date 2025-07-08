@@ -61,9 +61,9 @@
 }
 
 .navbar-logo-img {
-    height: 90px;
+    height: 110px;
     width: auto;
-    max-height: 90px;
+    max-height: 110px;
     max-width: 450px;
     object-fit: contain;
     object-position: center;
@@ -77,7 +77,7 @@
 .navbar-logo-text {
     color: #111;
     font-family: "Times New Roman", Times, serif;
-    font-size: 1.3rem;
+    font-size: 1.8rem;
     font-weight: 700;
     letter-spacing: 0.5px;
     text-transform: uppercase;
@@ -231,13 +231,13 @@ body.home-page .whatsapp-nav-button.active::after {
 }
 
 .mobile-menu-logo-img {
-    height: 60px;
+    height: 80px;
     margin-right: 10px;
 }
 
 .mobile-menu-logo-text {
-    color: #111;
-    font-size: 1rem;
+    color: var(--white);
+    font-size: 1.5rem;
     font-weight: 700;
     text-transform: uppercase;
     text-shadow: none !important;
@@ -253,7 +253,7 @@ body.home-page .mobile-menu-logo-text {
 }
 
 .navbar-mobile-item {
-    color: #111;
+    color: var(--white);
     text-decoration: none;
     padding: 15px 30px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -295,7 +295,6 @@ body.home-page .navbar-mobile-item.whatsapp-nav-button {
 .navbar-mobile-item.whatsapp-nav-button:hover {
     color: #ffffff;
     background: rgba(255, 255, 255, 0.1);
-    padding-left: 40px;
 }
 
 body.home-page .navbar-mobile-item:hover,
@@ -363,13 +362,13 @@ body.home-page .navbar-mobile-item.whatsapp-nav-button:hover {
     }
 
     .navbar-logo-img {
-        height: 50px;
+        height: 70px;
         width: auto;
         max-width: unset;
     }
 
     .navbar-logo-text {
-        font-size: 1rem;
+        font-size: 1.4rem;
         letter-spacing: 0.5px;
         max-width: 180px;
     }
@@ -395,12 +394,12 @@ body.home-page .navbar-mobile-item.whatsapp-nav-button:hover {
     }
 
     .navbar-logo-img {
-        height: 45px;
+        height: 60px;
         width: auto;
     }
 
     .navbar-logo-text {
-        font-size: 0.85rem;
+        font-size: 1.2rem;
         letter-spacing: 0.3px;
         max-width: 140px;
         /* Even more limited width for smallest screens */
@@ -445,13 +444,11 @@ body.home-page .navbar-mobile-item.whatsapp-nav-button:hover {
     }
 }
 
-body:not(.home-page) .navbar-item:not(:first-child),
-body:not(.home-page) .navbar-mobile-item:not(:first-child) {
+body:not(.home-page) .navbar-item:not(:first-child) {
     position: relative;
 }
 
-body:not(.home-page) .navbar-item:not(:first-child)::after,
-body:not(.home-page) .navbar-mobile-item:not(:first-child)::after {
+body:not(.home-page) .navbar-item:not(:first-child)::after {
     content: '';
     display: block;
     position: absolute;

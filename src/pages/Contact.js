@@ -54,7 +54,7 @@ const Contact = () => {
     return (
         <div className="contact">
             <section className="contact-main section">
-                <div className="container">
+                <div className="container contact-page-container">
                     <div className="contact-content">
                         {/* Contact Form */}
                         <div className="contact-form-container">

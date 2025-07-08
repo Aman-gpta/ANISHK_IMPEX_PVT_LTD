@@ -703,6 +703,35 @@
     .section-title {
         font-size: 2rem;
     }
+
+    .products-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .product-card {
+        width: 90%;
+        max-width: 400px;
+        height: auto;
+        padding: 2rem;
+    }
+
+    .product-card-img {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 1.5rem;
+    }
+
+    .product-card-title {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .product-btn-animated {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
 }
 
 @media (max-width: 480px) {
