@@ -564,6 +564,7 @@
 /* Products Section */
 .products-section {
     padding: 5rem 0;
+    scroll-margin-top: 140px;
 }
 
 .products-grid {

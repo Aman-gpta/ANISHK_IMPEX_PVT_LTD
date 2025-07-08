@@ -100,6 +100,7 @@ const Navbar = () => {
     };
 
     const handleProductsClick = (e) => {
+        setIsOpen(false);
         e.preventDefault();
         if (window.location.pathname !== '/') {
             window.location.assign('/#products');
