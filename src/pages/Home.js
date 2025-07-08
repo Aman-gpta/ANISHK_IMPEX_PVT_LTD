@@ -1,12 +1,11 @@
 import React, { useEffect } from 'react';
-import { ArrowRight, Download, Phone, Mail, MapPin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import SmoothTyping from '../components/SmoothTyping';
+import ProductCard from '../components/ProductCard'; // Import the new card
 import heroBgImage from '../assets/HeroBgImg.png';
-import prod1Image from '../assets/prod1.jpg';
 import offwhiteImage from '../assets/offwhite.jpg';
-import copperImg from '../assets/prod1.jpg'; // Replace with actual copper image if available
-import aluminiumImg from '../assets/prod1.jpg'; // Replace with actual aluminium image if available
-import metalScrapBg from '../assets/metal-scrap-background.jpg';
+import copperImg from '../assets/prod1.jpg';
+import aluminiumImg from '../assets/prod1.jpg';
 import './Home.css';
 import { useLocation } from 'react-router-dom';
 
@@ -58,18 +57,18 @@ const Home = () => {
                 <div className="container">
                     <h2 className="section-title" style={{color: '#111'}}>Our Products</h2>
                     <div className="products-grid">
-                        {/* Copper Products Card */}
-                        <div className="product-card">
-                            <img src={copperImg} alt="Copper Products" className="product-card-img" />
-                            <h3 className="product-card-title">Copper Products</h3>
-                            <button className="product-btn-animated">View Copper Products</button>
-                        </div>
-                        {/* Aluminium Products Card */}
-                        <div className="product-card">
-                            <img src={aluminiumImg} alt="Aluminium Products" className="product-card-img" />
-                            <h3 className="product-card-title">Aluminium Products</h3>
-                            <button className="product-btn-animated">View Aluminium Products</button>
-                        </div>
+                        <ProductCard
+                            image={copperImg}
+                            title="Copper Products"
+                            linkTo="/copper"
+                            linkText="View Copper Products"
+                        />
+                        <ProductCard
+                            image={aluminiumImg}
+                            title="Aluminium Products"
+                            linkTo="/aluminium"
+                            linkText="View Aluminium Products"
+                        />
                     </div>
                 </div>
             </section>

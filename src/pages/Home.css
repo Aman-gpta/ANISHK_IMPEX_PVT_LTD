@@ -567,13 +567,16 @@
 }
 
 .products-grid {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 2in;
-    justify-content: center;
+    max-width: 1050px;
+    /* Adjusted to maintain card size with the new gap */
+    margin: 0 auto;
 }
 
 .product-card {
-    background: linear-gradient(135deg, #444 60%, #666 100%);
+    background: rgba(255, 255, 255, 0.05);
     color: #fff;
     border-radius: 20px;
     box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);

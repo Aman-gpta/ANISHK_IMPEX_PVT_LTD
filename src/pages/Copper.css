@@ -1,0 +1,66 @@
+.copper-page {
+    padding: 120px 0 80px;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.page-title {
+    font-size: 3rem;
+    color: var(--black);
+    text-align: center;
+    margin-bottom: 4rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.product-page-container {
+    max-width: 1400px;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+@media (max-width: 1200px) {
+    /* No changes needed for flexbox */
+}
+
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2.5rem;
+    }
+
+    .product-grid {
+        /* No changes needed for flexbox */
+    }
+}
+
+.page-navigation-container {
+    text-align: center;
+    margin-top: 4rem;
+    padding-bottom: 2rem;
+}
+
+.page-navigation-btn {
+    display: inline-block;
+    background: linear-gradient(45deg, var(--primary), var(--black));
+    color: #fff;
+    padding: 1rem 2.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.page-navigation-btn:hover {
+    background: linear-gradient(45deg, #a05d3c, #1a1a1a);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
