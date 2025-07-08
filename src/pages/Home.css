@@ -380,6 +380,11 @@
     overflow: visible;
     white-space: normal;
     word-wrap: break-word;
+    opacity: 0;
+}
+
+.typewriter-line.fade-in-up {
+    animation: fadeInUp 1s ease-out forwards;
 }
 
 .second-line {
