@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Heart, Phone } from 'lucide-react';
+import { Mail, Heart, Phone, Linkedin, Twitter, Instagram, Facebook } from 'lucide-react';
 import './Footer.css';
 
 const Footer = () => {
@@ -13,8 +13,28 @@ const Footer = () => {
         },
         {
             icon: <Phone size={20} />,
-            name: "WhatsApp",
-            url: "https://wa.me/919887973000" // Replace with your actual WhatsApp number
+            name: "Call",
+            url: "tel:+919887973000"
+        },
+        {
+            icon: <Linkedin size={20} />,
+            name: "LinkedIn",
+            url: "https://linkedin.com/your-profile"
+        },
+        {
+            icon: <Twitter size={20} />,
+            name: "X",
+            url: "https://x.com/your-profile"
+        },
+        {
+            icon: <Instagram size={20} />,
+            name: "Instagram",
+            url: "https://instagram.com/your-profile"
+        },
+        {
+            icon: <Facebook size={20} />,
+            name: "Facebook",
+            url: "https://facebook.com/your-profile"
         }
     ];
 

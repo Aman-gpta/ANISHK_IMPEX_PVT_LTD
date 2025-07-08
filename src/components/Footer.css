@@ -250,7 +250,11 @@
 
     .footer-legal {
         flex-direction: column;
-        gap: 0.5rem;
+        gap: 1rem;
+    }
+
+    .footer-contact p {
+        justify-content: center;
     }
 
     .contact-section {
@@ -259,5 +263,5 @@
 }
 
 .contact-section {
-    padding-left: 0;
+    text-align: center;
 }
