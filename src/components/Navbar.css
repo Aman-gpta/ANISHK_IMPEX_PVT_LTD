@@ -40,6 +40,7 @@
     margin-left: 0;
     padding-left: 15px;
     height: 100%;
+    gap: 15px;
 }
 
 .navbar-logo {
@@ -51,7 +52,7 @@
     padding: 0;
     margin: 0;
     border-radius: 10px;
-    gap: 10px;
+    gap: 15px;
     height: 100%;
 }
 
@@ -84,7 +85,6 @@
     text-shadow: none !important;
     box-shadow: none !important;
     white-space: nowrap;
-    margin-left: -5px;
     position: relative;
 }
 
@@ -187,7 +187,7 @@ body.home-page .whatsapp-nav-button.active::after {
     background: rgba(255, 255, 255, 0.15);
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    z-index: 1001;
+    z-index: 1011;
     /* Make sure it's above everything */
 }
 
@@ -358,17 +358,17 @@ body.home-page .navbar-mobile-item.whatsapp-nav-button:hover {
 
     .navbar-container {
         padding: 5px 20px 5px 10px;
-        height: 65px;
+        height: 100px;
     }
 
     .navbar-logo-img {
-        height: 70px;
+        height: 110px;
         width: auto;
         max-width: unset;
     }
 
     .navbar-logo-text {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
         letter-spacing: 0.5px;
         max-width: 180px;
     }
@@ -385,47 +385,50 @@ body.home-page .navbar-mobile-item.whatsapp-nav-button:hover {
 
 @media (max-width: 480px) {
     .navbar-container {
-        padding: 5px 15px 5px 5px;
-        height: 60px;
+        padding: 0 15px;
     }
 
     .navbar-mobile-menu {
-        max-height: 100vh;
+        width: 100%;
+        max-width: 100%;
     }
 
     .navbar-logo-img {
-        height: 60px;
-        width: auto;
+        height: 100px;
     }
 
     .navbar-logo-text {
-        font-size: 1.2rem;
-        letter-spacing: 0.3px;
-        max-width: 140px;
-        /* Even more limited width for smallest screens */
+        font-size: 1.4rem;
+    }
+
+    .mobile-menu-logo-img {
+        height: 90px;
+    }
+
+    .mobile-menu-logo-text {
+        font-size: 1.6rem;
     }
 
     .navbar-logo {
         gap: 8px;
-        padding: 0;
     }
 
     .navbar-brand {
-        margin-left: 0;
+        padding-left: 0;
     }
 
     .navbar-mobile-item {
-        padding: 1rem 20px;
-        font-size: 1rem;
+        font-size: 1.2rem;
+        padding: 18px 25px;
     }
 
     .navbar-mobile-item:hover,
-    .navbar-mobile-item.active {
-        padding-left: 30px;
+    .navbar-mobile-item.whatsapp-nav-button:hover {
+        background: rgba(255, 255, 255, 0.15);
     }
 
     .navbar-toggle {
-        padding: 6px;
+        padding: 8px;
     }
 }
 
@@ -436,7 +439,7 @@ body.home-page .navbar-mobile-item.whatsapp-nav-button:hover {
     }
 
     .navbar-logo-img {
-        height: 40px;
+        height: 90px;
     }
 
     .navbar-container {
