@@ -47,14 +47,14 @@ const Contact = () => {
         {
             icon: <Phone size={24} />,
             title: "Phone",
-            info: "+1 (555) 789-0123",
-            link: "tel:+15557890123"
+            info: "+91 -9887973000",
+            link: "tel:+91-9887973000"
         },
         {
             icon: <MapPin size={24} />,
-            title: "Location",
-            info: "1234 Industrial Blvd, Steel City, TX",
-            link: "#"
+            title: "Working Office",
+            info: "1st Floor,  SB-10, Narayan Sagar, Narayan Vihar, Gopalpura Bypass, Ajmer, Road, Jaipur, Rajasthan 302020",
+            link: "https://maps.app.goo.gl/2bZWAUnjr52NWi9W6?g_st=iwb"
         }
     ];
 
@@ -162,6 +162,16 @@ const Contact = () => {
                                         </div>
                                     </a>
                                 ))}
+                                <div className="contact-item-static">
+                                    <div className="contact-icon">
+                                        <MapPin size={24} />
+                                    </div>
+                                    <div className="contact-text">
+                                        <h4>Registered Office</h4>
+                                        <p>201, Shree Ram Residency, P.No. 3-4, Sankhla Colony, Tonk Road, Jaipur (Raj.)
+Pincode- 302015</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
